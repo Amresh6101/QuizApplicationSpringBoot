@@ -2,7 +2,6 @@ package com.quiz.management.application.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.List;
 
 @Entity
@@ -13,7 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @Table(name = "question")
 public class QuestionEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "question_id")
@@ -30,7 +28,6 @@ public class QuestionEntity {
     @ManyToOne
     @JoinColumn(name = "quiz_id")
     private QuizEntity quiz;
-
     @Override
     public String toString() {
         return "QuestionEntity{" +

@@ -10,7 +10,6 @@ public class QuizApplicationServiceApplication {
 
 	public static void main(String[] args)
 	{
-
 		SpringApplication.run(QuizApplicationServiceApplication.class, args);
 	}
 	@Bean

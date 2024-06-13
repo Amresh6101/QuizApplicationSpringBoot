@@ -1,6 +1,5 @@
 package com.quiz.management.application.handler;
 
-
 import com.quiz.management.application.exception.QuestionException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

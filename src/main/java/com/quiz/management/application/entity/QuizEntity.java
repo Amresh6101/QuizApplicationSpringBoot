@@ -2,7 +2,6 @@ package com.quiz.management.application.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.List;
 
 @Entity
@@ -21,7 +20,6 @@ public class QuizEntity {
     private String category;
     @OneToMany(mappedBy = "quiz",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<QuestionEntity> questions;
-
     @Override
     public String toString() {
         return "QuizEntity{" +

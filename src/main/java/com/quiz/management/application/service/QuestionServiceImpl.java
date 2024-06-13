@@ -7,11 +7,9 @@ import com.quiz.management.application.entity.QuestionEntity;
 import com.quiz.management.application.entity.QuizEntity;
 import com.quiz.management.application.exception.QuestionException;
 import com.quiz.management.application.repository.QuestionRepositry;
-import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class QuestionServiceImpl implements QuestionService{
@@ -40,13 +38,8 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    @Transactional
     public void deleteQuestion(Integer questionid) throws QuestionException {
-        // we have to work on it
-        //QuestionEntity questionEntity=questionRepository.findById(questionid).orElseThrow(()-> new QuestionException("Sorry No Question available for this id"));
-        //System.out.println(questionEntity);
        questionRepository.deleteById(questionid);
-
     }
 
     @Override

@@ -2,9 +2,7 @@ package com.quiz.management.application.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
-
 import java.util.List;
-
 
 @Getter
 @Setter

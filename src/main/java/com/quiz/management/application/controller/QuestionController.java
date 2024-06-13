@@ -1,6 +1,5 @@
 package com.quiz.management.application.controller;
 
-
 import com.quiz.management.application.dto.QuestionDTO;
 import com.quiz.management.application.dto.QuestionResponseDTO;
 import com.quiz.management.application.exception.QuestionException;
@@ -11,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "questions")
