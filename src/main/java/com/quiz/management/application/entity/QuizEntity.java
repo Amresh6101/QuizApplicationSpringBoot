@@ -18,8 +18,9 @@ public class QuizEntity {
     private Integer id;
     @Column(name = "category")
     private String category;
-    @OneToMany(mappedBy = "quiz",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<QuestionEntity> questions;
+
     @Override
     public String toString() {
         return "QuizEntity{" +

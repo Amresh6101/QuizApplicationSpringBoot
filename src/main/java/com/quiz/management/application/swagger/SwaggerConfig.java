@@ -9,7 +9,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
         info = @Info(
                 title = "Quiz Management APIs",
                 description = "Quiz Management related all apis",
-                contact=@Contact(
+                contact = @Contact(
                         name = "AmreshRanjan",
                         email = "amresh_ranjan@epam.com"
                 ),

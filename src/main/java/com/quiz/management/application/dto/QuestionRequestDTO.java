@@ -1,8 +1,6 @@
 package com.quiz.management.application.dto;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
-
 import java.util.List;
 
 @Getter
@@ -10,24 +8,25 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class QuestionResponseDTO {
-    @NotNull
+public class QuestionRequestDTO {
     private Integer id;
     private String category;
     private String description;
     private List<String> options;
     private Integer correctOption;
     private String difficulty;
+    private QuizRequestDTO QuizRequestDTO;
 
     @Override
     public String toString() {
-        return "QuestionResponseDTO{" +
+        return "QuestionRequestDTO{" +
                 "id=" + id +
                 ", category='" + category + '\'' +
                 ", description='" + description + '\'' +
                 ", options=" + options +
                 ", correctOption=" + correctOption +
                 ", difficulty='" + difficulty + '\'' +
+                ", QuizRequestDTO=" + QuizRequestDTO +
                 '}';
     }
 }

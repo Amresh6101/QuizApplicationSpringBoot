@@ -2,6 +2,7 @@ package com.quiz.management.application.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.util.List;
 
 @Entity
@@ -28,6 +29,7 @@ public class QuestionEntity {
     @ManyToOne
     @JoinColumn(name = "quiz_id")
     private QuizEntity quiz;
+
     @Override
     public String toString() {
         return "QuestionEntity{" +

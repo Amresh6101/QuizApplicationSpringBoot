@@ -1,9 +1,13 @@
 package com.quiz.management.application.repository;
 
 import com.quiz.management.application.entity.QuizEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface QuizRepository  extends CrudRepository<QuizEntity, Integer>{
+import java.util.Optional;
+
+public interface QuizRepository extends JpaRepository<QuizEntity, Integer> {
+    Optional<QuizEntity> findByCategory(String category);
 }
 
 

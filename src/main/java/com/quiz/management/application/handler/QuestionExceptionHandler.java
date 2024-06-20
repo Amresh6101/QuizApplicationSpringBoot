@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class QuestionExceptionHandler {
     @ExceptionHandler(QuestionException.class)
-    public String questionExceptionHandler(QuestionException ex){
+    public String questionExceptionHandler(QuestionException ex) {
+        return ex.getMessage();
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public String questionRuntimeExceptionHandler(RuntimeException ex) {
         return ex.getMessage();
     }
 }

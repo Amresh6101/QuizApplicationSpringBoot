@@ -1,5 +1,6 @@
 package com.quiz.management.application.dto;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 import java.util.List;
 
@@ -8,14 +9,15 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class QuizResponseDTO {
+public class QuizRequestDTO {
     private Integer id;
+    @NotEmpty(message = "Quiz category is mandatory")
     private String category;
-    private List<QuestionResponseDTO> questions;
+    private List<QuestionRequestDTO> questions;
 
     @Override
     public String toString() {
-        return "QuizResponseDTO{" +
+        return "QuizRequestDTO{" +
                 "id=" + id +
                 ", category='" + category + '\'' +
                 ", questions=" + questions +
