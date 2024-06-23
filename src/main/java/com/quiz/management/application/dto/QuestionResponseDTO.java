@@ -18,16 +18,16 @@ public class QuestionResponseDTO {
     private List<String> options;
     private Integer correctOption;
     private String difficulty;
-
-    @Override
-    public String toString() {
-        return "QuestionResponseDTO{" +
-                "id=" + id +
-                ", category='" + category + '\'' +
-                ", description='" + description + '\'' +
-                ", options=" + options +
-                ", correctOption=" + correctOption +
-                ", difficulty='" + difficulty + '\'' +
-                '}';
-    }
+//
+//    @Override
+//    public String toString() {
+//        return "QuestionResponseDTO{" +
+//                "id=" + id +
+//                ", category='" + category + '\'' +
+//                ", description='" + description + '\'' +
+//                ", options=" + options +
+//                ", correctOption=" + correctOption +
+//                ", difficulty='" + difficulty + '\'' +
+//                '}';
+//    }
 }

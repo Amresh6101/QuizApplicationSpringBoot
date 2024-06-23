@@ -17,16 +17,16 @@ public class QuestionRequestDTO {
     private String difficulty;
     private QuizRequestDTO QuizRequestDTO;
 
-    @Override
-    public String toString() {
-        return "QuestionRequestDTO{" +
-                "id=" + id +
-                ", category='" + category + '\'' +
-                ", description='" + description + '\'' +
-                ", options=" + options +
-                ", correctOption=" + correctOption +
-                ", difficulty='" + difficulty + '\'' +
-                ", QuizRequestDTO=" + QuizRequestDTO +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "QuestionRequestDTO{" +
+//                "id=" + id +
+//                ", category='" + category + '\'' +
+//                ", description='" + description + '\'' +
+//                ", options=" + options +
+//                ", correctOption=" + correctOption +
+//                ", difficulty='" + difficulty + '\'' +
+//                ", QuizRequestDTO=" + QuizRequestDTO +
+//                '}';
+//    }
 }

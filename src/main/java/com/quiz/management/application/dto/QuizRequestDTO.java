@@ -15,12 +15,12 @@ public class QuizRequestDTO {
     private String category;
     private List<QuestionRequestDTO> questions;
 
-    @Override
-    public String toString() {
-        return "QuizRequestDTO{" +
-                "id=" + id +
-                ", category='" + category + '\'' +
-                ", questions=" + questions +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "QuizRequestDTO{" +
+//                "id=" + id +
+//                ", category='" + category + '\'' +
+//                ", questions=" + questions +
+//                '}';
+//    }
 }

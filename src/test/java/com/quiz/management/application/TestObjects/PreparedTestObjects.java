@@ -6,7 +6,6 @@ import com.quiz.management.application.dto.QuizRequestDTO;
 import com.quiz.management.application.dto.QuizResponseDTO;
 import com.quiz.management.application.entity.QuestionEntity;
 import com.quiz.management.application.entity.QuizEntity;
-
 import java.util.Arrays;
 
 public class PreparedTestObjects {
@@ -55,7 +54,7 @@ public class PreparedTestObjects {
         questionRequestDTO.setCorrectOption(1);
         questionRequestDTO.setOptions(Arrays.asList("one1", "two2", "three3"));
         questionRequestDTO.setDifficulty("Easy");
-        //  questionRequestDTO.setQuizRequestDTO(getQuizRequestDTO());
+       // questionRequestDTO.setQuizRequestDTO(new QuizRequestDTO());
         return questionRequestDTO;
     }
 

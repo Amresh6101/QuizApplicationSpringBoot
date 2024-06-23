@@ -13,12 +13,12 @@ public class QuizResponseDTO {
     private String category;
     private List<QuestionResponseDTO> questions;
 
-    @Override
-    public String toString() {
-        return "QuizResponseDTO{" +
-                "id=" + id +
-                ", category='" + category + '\'' +
-                ", questions=" + questions +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "QuizResponseDTO{" +
+//                "id=" + id +
+//                ", category='" + category + '\'' +
+//                ", questions=" + questions +
+//                '}';
+//    }
 }

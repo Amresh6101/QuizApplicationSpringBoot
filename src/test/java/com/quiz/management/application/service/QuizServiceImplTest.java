@@ -5,6 +5,7 @@ import com.quiz.management.application.TestObjects.PreparedTestObjects;
 import com.quiz.management.application.dto.QuestionRequestDTO;
 import com.quiz.management.application.dto.QuestionResponseDTO;
 import com.quiz.management.application.dto.QuizRequestDTO;
+import com.quiz.management.application.dto.QuizResponseDTO;
 import com.quiz.management.application.entity.QuestionEntity;
 import com.quiz.management.application.entity.QuizEntity;
 import com.quiz.management.application.exception.QuizException;
@@ -15,11 +16,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.context.SpringBootTest;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -38,15 +38,21 @@ public class QuizServiceImplTest {
     public void testCreateQuiz() {
         QuizRequestDTO quizRequestDTO = PreparedTestObjects.getQuizRequestDTO();
         QuestionRequestDTO questionRequestDTO = PreparedTestObjects.getQuestionRequestDTO();
-        quizRequestDTO.setQuestions(Arrays.asList(questionRequestDTO));
+        quizRequestDTO.setQuestions(List.of(questionRequestDTO));
         questionRequestDTO.setQuizRequestDTO(quizRequestDTO);
         QuizEntity quizEntity = PreparedTestObjects.getQuizEntity();
         QuestionEntity questionEntity = PreparedTestObjects.getQuestionEntity();
-        quizEntity.setQuestions(Arrays.asList(questionEntity));
+        quizEntity.setQuestions(List.of(questionEntity));
         questionEntity.setQuiz(quizEntity);
+        QuizResponseDTO quizResponseDTO1 = PreparedTestObjects.getQuizResponseDto();
+        QuestionResponseDTO questionResponseDTO = PreparedTestObjects.getQuestionResponseDto();
+        quizResponseDTO1.setQuestions(List.of(questionResponseDTO));
+
         when(quizRepository.findByCategory(Mockito.anyString())).thenReturn(Optional.of(quizEntity));
         when(quizRepository.save(any())).thenReturn(any());
-        quizService.createQuiz(quizRequestDTO);
+
+        QuizResponseDTO quizResponseDTO = quizService.createQuiz(quizRequestDTO);
+        assertNull(quizResponseDTO);
         verify(quizRepository, Mockito.atLeastOnce()).findByCategory(Mockito.anyString());
         verify(quizRepository, Mockito.times(1)).save(any());
     }
